@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-land\\values-land.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -31,10 +31,10 @@
             ]
         },
         {
-            "outputFile": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\d518f3fef925f2f9b5283833bb85d59e\\res\\values-land\\values-land.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -46,10 +46,40 @@
             ]
         },
         {
-            "outputFile": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\d518f3fef925f2f9b5283833bb85d59e\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

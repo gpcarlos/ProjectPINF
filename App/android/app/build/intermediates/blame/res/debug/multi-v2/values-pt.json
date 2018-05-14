@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\d518f3fef925f2f9b5283833bb85d59e\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\f494231732da51635a2e5baf2e4f4163\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -33,42 +33,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pt\\values-pt.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1989",
-                        "endColumns": "100",
-                        "endOffsets": "2085"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
-                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
-                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\d518f3fef925f2f9b5283833bb85d59e\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -78,7 +46,7 @@
                     }
                 },
                 {
-                    "source": "C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\f494231732da51635a2e5baf2e4f4163\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -97,10 +65,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-pt\\values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -117,7 +85,103 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
+                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
+                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "map": [
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
+                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
+                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
+                    }
+                },
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\home\\carlosgp\\ReactProjects\\PrototipoPINF\\android\\C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1989",
+                        "endColumns": "100",
+                        "endOffsets": "2085"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/values-pt/values-pt.xml",
+            "map": [
+                {
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
+                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
+                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
+                    }
+                },
+                {
+                    "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1989",
+                        "endColumns": "100",
+                        "endOffsets": "2085"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "map": [
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1989",
+                        "endColumns": "100",
+                        "endOffsets": "2085"
+                    }
+                },
+                {
+                    "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -1,8 +1,9 @@
-node_modules/*
+node_modules/
 lib/firebase.js
 logo.png
-android/app/build
-android/build
+android/app/build/
+android/build/
 android/gradle.properties
 android/app/my-release-key.keystore
-android/.gradle
+android/.gradle/
+yarn.lock

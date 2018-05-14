@@ -13,6 +13,7 @@
     "react-native": "0.55.3",
     "react-native-camera": "^1.1.2",
     "react-native-camera-roll-picker": "^1.2.3",
+    "react-native-countdown-circle": "^3.0.0",
     "react-native-elements": "^1.0.0-beta5",
     "react-native-fetch-blob": "^0.10.2",
     "react-native-image-picker": "^0.26.9",

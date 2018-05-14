@@ -7,7 +7,7 @@ import MainScreen from './views/MainScreen'
 import Settings from './views/Settings'
 import Loading from './views/Loading'
 import AddUser from './views/AddUser'
-import FaceRecognition from './views/FaceRecognition'
+import SkeletonRecognition from './views/SkeletonRecognition'
 
 import Firebase from './lib/firebase'
 import { YellowBox } from 'react-native';
@@ -27,8 +27,8 @@ const RootStack = StackNavigator({
       AddUser: {
         screen: AddUser
       },
-      FaceRecognition:{
-        screen: FaceRecognition
+      SkeletonRecognition:{
+        screen: SkeletonRecognition
       }
     },
     {

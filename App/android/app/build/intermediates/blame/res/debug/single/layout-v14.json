@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\texture_view.xml",
-        "source": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\node_modules\\react-native-camera\\android\\build\\intermediates\\bundles\\debug\\res\\layout-v14\\texture_view.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/layout-v14/texture_view.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/node_modules/react-native-camera/android/build/intermediates/bundles/debug/res/layout-v14/texture_view.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\texture_view.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\node_modules\\react-native-camera\\android\\build\\intermediates\\bundles\\debug\\res\\layout-v14\\texture_view.xml"
     }
 ]

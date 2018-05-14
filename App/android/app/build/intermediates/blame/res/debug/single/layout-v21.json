@@ -1,18 +1,34 @@
 [
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_action.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\0743da5bd322889f8b0d952191b5bad7\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/f494231732da51635a2e5baf2e4f4163/res/layout-v21/notification_template_icon_group.xml"
     }
 ]

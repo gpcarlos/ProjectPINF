@@ -1,10 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
-        "source": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\node_modules\\react-native-image-picker\\android\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/node_modules/react-native-image-picker/android/build/intermediates/bundles/debug/res/xml/provider_paths.xml"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.55.3.aar\\679d85afff9941f1ce505530280feab4\\res\\xml\\preferences.xml"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/react-native-0.55.3.aar/a5791d126e2f2c47c61fabc33e18c452/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\node_modules\\react-native-image-picker\\android\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.55.3.aar\\679d85afff9941f1ce505530280feab4\\res\\xml\\preferences.xml"
     }
 ]

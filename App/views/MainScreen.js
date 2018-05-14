@@ -68,7 +68,7 @@ export default class MainScreen extends Component {
                     titleStyle={{
                         color: "#1E9F9F"
                     }}
-                    onPress={()=>this.props.navigation.navigate('FaceRecognition')}
+                    // onPress={()=>this.props.navigation.navigate('FaceRecognition')}
                     />
                 </View>
                 <View style={styles.containerImage}>
@@ -88,6 +88,7 @@ export default class MainScreen extends Component {
                         titleStyle={{
                             color: "#F4A32B"
                         }}
+                      onPress={()=>this.props.navigation.navigate('SkeletonRecognition')}
                     />
                 </View>
 

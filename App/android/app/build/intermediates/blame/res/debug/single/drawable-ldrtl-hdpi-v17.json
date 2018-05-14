@@ -1,14 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/carlosgp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/d518f3fef925f2f9b5283833bb85d59e/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\Desktop\\PrototipoPINF\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/carlosgp/GitProjects/ProjectPINF/App/android/C:\\Users\\JuanFran\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb620fd528c7cbe9e9e5a35bb8623d36\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     }
 ]
