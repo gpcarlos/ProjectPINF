@@ -1,9 +1,8 @@
-node_modules/
-lib/firebase.js
-logo.png
-android/app/build/
-android/build/
-android/gradle.properties
-android/app/my-release-key.keystore
-android/.gradle/
-yarn.lock
+App/node_modules/
+App/lib/firebase.js
+App/android/app/build/
+App/android/build/
+App/android/gradle.properties
+App/android/app/my-release-key.keystore
+App/android/.gradle/
+App/yarn.lock

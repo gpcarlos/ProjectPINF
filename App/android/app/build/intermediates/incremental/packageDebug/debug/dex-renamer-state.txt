@@ -1,4 +1,0 @@
-#Mon May 14 17:27:50 CEST 2018
-base.0=/home/carlosgp/GitProjects/ProjectPINF/App/android/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
