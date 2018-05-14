@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-vector-icons\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-fetch-blob\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6728c530717163ff56658c3ff64f919d75d5c7b4">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-camera\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="168e07751bce5611293a928c9412ecddc399dd68">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-linear-gradient\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="10bce3308649051968a5a024ca15a2193838eed4">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-tensorflow\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6af4e6ee486d5792e7776ef55f6c3269e017f721">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JuanFran\Desktop\PrototipoPINF\node_modules\react-native-image-picker\android\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="471aaecffb142f0f7730d77df3d1c38e7cf25b0a">
+        <dex dex="C:\Users\JuanFran\Desktop\PrototipoPINF\android\app\build\intermediates\transforms\preDex\release\56.jar" />
+    </item>
+
+</items>
