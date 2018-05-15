@@ -6,3 +6,4 @@ App/android/gradle.properties
 App/android/app/my-release-key.keystore
 App/android/.gradle/
 App/yarn.lock
+.DS_Store

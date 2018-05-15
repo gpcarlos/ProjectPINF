@@ -17,9 +17,9 @@ export default class App extends Component<Props> {
 	onMessage( event ) {
 		console.warn(event.nativeEvent.data);
 		//**AÑADIDO POR AARON**
-		/*configMode debe ser modificada cuando se pulsan los botones 
+		/*configMode debe ser modificada cuando se pulsan los botones
 		'configuracion' y 'imitar pose'*/
-		if(configMode){ 
+		if(configMode){
 			configurePose(event.nativeEvent.data);
 		}else{
 			calculateAngles(event.nativeEvent.data);
@@ -142,7 +142,7 @@ export default class App extends Component<Props> {
         cos_alfa2 = cos_alfa2 / (Math.sqrt(lshoulder_lelbow_x*lshoulder_lelbow_x + lshoulder_lelbow_y*lshoulder_lelbow_y) * Math.sqrt(lshoulder_lhip_x*lshoulder_lhip_x + lshoulder_lhip_y*lshoulder_lhip_y));
 
         var lalfa = Math.acos(cos_alfa2)*180 / Math.PI; //angle in the left shoulder
-        
+
         //R-Beta angle
         var relbow_rwrist_x = rwrist_x - relbow_x;
         var relbow_rwrist_y = rwrist_y - relbow_y;
@@ -150,7 +150,7 @@ export default class App extends Component<Props> {
         var relbow_rshoulder_y = rshould_y - relbow_y;
         var cos_beta = relbow_rwrist_x*relbow_rshoulder_x + relbow_rwrist_y*relbow_rshoulder_y;
         cos_beta = cos_beta / (Math.sqrt(relbow_rwrist_x*relbow_rwrist_x + relbow_rwrist_y*relbow_rwrist_y) * Math.sqrt(relbow_rshoulder_x*relbow_rshoulder_x + relbow_rshoulder_y*relbow_rshoulder_y));
-        
+
         var rbeta = Math.acos(cos_beta)*180 / Math.PI;
 
         //L-Beta angle
@@ -160,7 +160,7 @@ export default class App extends Component<Props> {
         var lelbow_lshoulder_y = lshould_y - lelbow_y;
         var cos_beta2 = lelbow_lwrist_x*lelbow_lshoulder_x + lelbow_lwrist_y*lelbow_lshoulder_y;
         cos_beta2 = cos_beta2 / (Math.sqrt(lelbow_lwrist_x*lelbow_lwrist_x + lelbow_lwrist_y*lelbow_lwrist_y) * Math.sqrt(lelbow_lshoulder_x*lelbow_lshoulder_x + lelbow_lshoulder_y*lelbow_lshoulder_y));
-        
+
         var lbeta = Math.acos(cos_beta2)*180 / Math.PI;
 
         //****Rotation calculation****
