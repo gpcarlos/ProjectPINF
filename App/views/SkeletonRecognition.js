@@ -30,7 +30,7 @@ export default class SkeletonRecognition extends Component {
     constructor(props){
         super(props)
         this.state = {
-          condición: ''
+          countdown: false
         }
     }
 
@@ -49,6 +49,9 @@ export default class SkeletonRecognition extends Component {
         const sessionId = new Date().getTime()
         this.uploadImage(data.uri,sessionId)
 
+        this.setState({
+          countdown: false
+        })
       }
     };
 
@@ -95,49 +98,32 @@ export default class SkeletonRecognition extends Component {
                     />
                 </View>
 
-                {/* <View style={{width:"100%", height:"10%",backgroundColor:"gray",justifyContent: 'center',alignItems: 'center'}}>
-                  <CountdownCircle
-                     seconds={3}
-                     radius={30}
-                     borderWidth={10}
-                     color="#1E9F9F"
-                     textStyle={{ fontSize: 30 }}
-                     onTimeElapsed={() => console.log('Elapsed!')}
-                 />
-                </View> */}
-                <View style={{width:"100%", height:"10%", backgroundColor:"green",flexDirection:'row'}}>
-                    <Button
-                        title="Configuración"
-                        color="gray"
-                        backgroundColor="white"
-                        onPress={this.takePicture.bind(this)}
-                        buttonStyle={{
-                          height: "100%",
-                          backgroundColor:'white',
-                          borderColor : "rgba(78, 101, 112, 1)",
-                            borderWidth : 1
-                        }}
-                        titleStyle={{
-                            color:'#444'
-                        }}
-                        containerStyle={{
-                            width: "50%",
-                            height: "100%",
-                            marginTop:"auto",
-                            marginBottom:"auto",
-                            justifyContent: 'center'
-                        }}
-                      />
+                { this.state.countdown
+                  ?
+                  <View style={{width:"100%", height:"10%", backgroundColor:"black", justifyContent: 'center', alignItems: 'center'}}>
+                    <CountdownCircle
+                       seconds={10}
+                       radius={30}
+                       borderWidth={10}
+                       color="#1E9F9F"
+                       textStyle={{ fontSize: 30 }}
+                       onTimeElapsed={this.takePicture.bind(this)}
+                   />
+                  </View>
+                  :
+                  <View style={{width:"100%", height:"10%", backgroundColor:"white",flexDirection:'row'}}>
                       <Button
-                        title="Imitar Pose"
-                        color="gray"
-                        backgroundColor="white"
-                        //onPress={}
-                        buttonStyle={{
+                          title="Configuración"
+                          color="gray"
+                          backgroundColor="white"
+                          onPress={() => this.setState({
+                            countdown: true
+                          })}
+                          buttonStyle={{
                             height: "100%",
                             backgroundColor:'white',
                             borderColor : "rgba(78, 101, 112, 1)",
-                            borderWidth : 1
+                              borderWidth : 1
                           }}
                           titleStyle={{
                               color:'#444'
@@ -149,8 +135,46 @@ export default class SkeletonRecognition extends Component {
                               marginBottom:"auto",
                               justifyContent: 'center'
                           }}
-                      />
-                </View>
+                        />
+                        <Button
+                          title="Imitar Pose"
+                          color="gray"
+                          backgroundColor="white"
+                          onPress={() => this.setState({
+                            countdown: true
+                          })}
+                          buttonStyle={{
+                              height: "100%",
+                              backgroundColor:'white',
+                              borderColor : "rgba(78, 101, 112, 1)",
+                              borderWidth : 1
+                            }}
+                            titleStyle={{
+                                color:'#444'
+                            }}
+                            containerStyle={{
+                                width: "50%",
+                                height: "100%",
+                                marginTop:"auto",
+                                marginBottom:"auto",
+                                justifyContent: 'center'
+                            }}
+                        />
+                  </View>
+
+                }
+
+                {/* <View style={{width:"100%", height:"10%",backgroundColor:"gray",justifyContent: 'center',alignItems: 'center'}}>
+                  <CountdownCircle
+                     seconds={3}
+                     radius={30}
+                     borderWidth={10}
+                     color="#1E9F9F"
+                     textStyle={{ fontSize: 30 }}
+                     onTimeElapsed={() => console.log('Elapsed!')}
+                 />
+                </View> */}
+
             </View>
         )
     }
