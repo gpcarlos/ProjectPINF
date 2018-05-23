@@ -8,6 +8,7 @@ import Settings from './views/Settings'
 import Loading from './views/Loading'
 import AddUser from './views/AddUser'
 import SkeletonRecognition from './views/SkeletonRecognition'
+import EmotionRecognition from './views/EmotionRecognition'
 
 import Firebase from './lib/firebase'
 import { YellowBox } from 'react-native';
@@ -29,6 +30,9 @@ const RootStack = StackNavigator({
       },
       SkeletonRecognition:{
         screen: SkeletonRecognition
+      },
+      EmotionRecognition:{
+        screen: EmotionRecognition
       }
     },
     {
