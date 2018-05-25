@@ -7,11 +7,13 @@ import {
     TextInput,
     Dimensions,
     TouchableHighlight,
+    TouchableOpacity,
     Platform,
     ToastAndroid,
     ScrollView,
     StatusBar,
-    WebView
+    WebView,
+    Slider
 } from 'react-native'
 import * as firebase from 'firebase'
 import { FormLabel, FormInput, Button, FormValidationMessage } from 'react-native-elements'
@@ -26,200 +28,255 @@ const fs = RNFetchBlob.fs
 window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest
 window.Blob = Blob
 
-export default class SkeletonRecognition extends Component {
+const landmarkSize = 2;
 
-    constructor(props){
-        super(props)
-        this.state = {
-          condition: '',
-          configMode: true,
-          countdown: false,
-          lprop: 1,
-          rprop: 1
-        }
-        this.webView = null;
-    }
+export default class EmotionRecognition extends Component {
+    state = {
+    zoom: 0,
+    autoFocus: 'on',
+    depth: 0,
+    type: 'front',
+    whiteBalance: 'auto',
+    ratio: '16:9',
+    ratios: [],
+    photoId: 1,
+    showGallery: false,
+    photos: [],
+    faces: [],
+  };
 
-    static navigationOptions = ({ navigation }) => {
-      const params = navigation.state.params || {};
-      return {
-          header:null,
-      };
-    };
+  getRatios = async function() {
+    const ratios = await this.camera.getSupportedRatios();
+    return ratios;
+  };
 
-    takePicture = async function() {
-      if (this.camera) {
-        const options = { quality: 0.5, base64: true, width: 512 };
-        const data = await this.camera.takePictureAsync(options)
-        const face = await FaceDetector.detectFacesAsync(data.uri)
-        console.log(face)
-        console.log('Sending image...')
-        const sessionId = new Date().getTime()
-        //this.uploadImage(data.uri,sessionId)
+  setRatio(ratio) {
+    this.setState({
+      ratio,
+    });
+  }
 
-        this.setState({
-          countdown: false
-        })
-      }
-    };
+  toggleFocus() {
+    this.setState({
+      autoFocus: this.state.autoFocus === 'on' ? 'off' : 'on',
+    });
+  }
 
-    uploadImage = (uri, sessionId, mime = 'image/jpg') => {
-        return new Promise((resolve, reject) => {
-            const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri
-            let uploadBlob = null
-            const imageRef = firebase.storage().ref(`/imageEmotion`).child(`${sessionId}`)
-            fs.readFile(uploadUri, 'base64')
-                .then((data) => {
-                    return Blob.build(data, {type: `${mime};BASE64`})
-                })
-                .then((blob) => {
-                    uploadBlob = blob
-                    return imageRef.put(uploadBlob, {contentType: mime})
-                })
-                .then(() => {
-                    uploadBlob.close()
-                    return imageRef.getDownloadURL()
-                })
-                .then((url) => {
-                  resolve(url)
-                })
-                .catch((error) => {
-                    reject(error)
-                })
-        })
-    }
+  setFocusDepth(depth) {
+    this.setState({
+      depth,
+    });
+  }
 
-    render(){
-        return (
-            <View style={{flex: 1, flexDirection: 'column',justifyContent: 'center',alignItems: 'center'}}>
-                <View style={{width:"100%", height:"90%",backgroundColor:"gray"}}>
-                    <RNCamera
-                        ref={ref => {
-                        this.camera = ref;
-                        }}
-                        style = {styles.preview}
-                        type={RNCamera.Constants.Type.front}
-                        flashMode={RNCamera.Constants.FlashMode.off}
-                        permissionDialogTitle={'Permiso de cámara'}
-                        permissionDialogMessage={'Se necesita permiso para usar la cámara'}
-                    />
-                </View>
+  onFacesDetected = ({ faces }) => this.setState({ faces });
+  onFaceDetectionError = state => console.warn('Faces detection error:', state);
 
-                { this.state.countdown
-                  ?
-                  <View style={{width:"100%", height:"10%", backgroundColor:"black", justifyContent: 'center', alignItems: 'center'}}>
-                    <CountdownCircle
-                       seconds={3}
-                       radius={30}
-                       borderWidth={10}
-                       color="#1E9F9F"
-                       textStyle={{ fontSize: 30 }}
-                       onTimeElapsed={this.takePicture.bind(this)}
-                   />
-                  </View>
-                  :
-                  <View style={{width:"100%", height:"10%", backgroundColor:"white",flexDirection:'row'}}>
-                      <Button
-                          title="Configuración"
-                          color="gray"
-                          backgroundColor="white"
-                          onPress={() => this.setState({
-                            countdown: true
-                          })}
-                          buttonStyle={{
-                            height: "100%",
-                            backgroundColor:'white',
-                            borderColor : "rgba(78, 101, 112, 1)",
-                              borderWidth : 1
-                          }}
-                          titleStyle={{
-                              color:'#444'
-                          }}
-                          containerStyle={{
-                              width: "50%",
-                              height: "100%",
-                              marginTop:"auto",
-                              marginBottom:"auto",
-                              justifyContent: 'center'
-                          }}
-                        />
-                        <Button
-                          title="Imitar Pose"
-                          color="gray"
-                          backgroundColor="white"
-                          onPress={() => this.setState({
-                            countdown: true
-                          })}
-                          buttonStyle={{
-                              height: "100%",
-                              backgroundColor:'white',
-                              borderColor : "rgba(78, 101, 112, 1)",
-                              borderWidth : 1
-                            }}
-                            titleStyle={{
-                                color:'#444'
-                            }}
-                            containerStyle={{
-                                width: "50%",
-                                height: "100%",
-                                marginTop:"auto",
-                                marginBottom:"auto",
-                                justifyContent: 'center'
-                            }}
-                        />
-                  </View>
+  renderFace({ bounds, faceID, rollAngle, yawAngle }) {
+    return (
+      <View
+        key={faceID}
+        transform={[
+          { perspective: 600 },
+          { rotateZ: `${rollAngle.toFixed(0)}deg` },
+          { rotateY: `${yawAngle.toFixed(0)}deg` },
+        ]}
+        style={[
+          styles.face,
+          {
+            ...bounds.size,
+            left: bounds.origin.x,
+            top: bounds.origin.y,
+          },
+        ]}
+      >
+      </View>
+    );
+  }
 
-                }
+  renderLandmarksOfFace(face) {
+    const renderLandmark = position =>
+      position && (
+        <View
+          style={[
+            styles.landmark,
+            {
+              left: position.x - landmarkSize / 2,
+              top: position.y - landmarkSize / 2,
+            },
+          ]}
+        />
+      );
+    return (
+      <View key={`landmarks-${face.faceID}`}>
+        {renderLandmark(face.leftEyePosition)}
+        {renderLandmark(face.rightEyePosition)}
+        {renderLandmark(face.leftEarPosition)}
+        {renderLandmark(face.rightEarPosition)}
+        {renderLandmark(face.leftCheekPosition)}
+        {renderLandmark(face.rightCheekPosition)}
+        {renderLandmark(face.leftMouthPosition)}
+        {renderLandmark(face.mouthPosition)}
+        {renderLandmark(face.rightMouthPosition)}
+        {renderLandmark(face.noseBasePosition)}
+        {renderLandmark(face.bottomMouthPosition)}
+      </View>
+    );
+  }
 
-                {/* <View style={{width:"100%", height:"10%",backgroundColor:"gray",justifyContent: 'center',alignItems: 'center'}}>
-                  <CountdownCircle
-                     seconds={3}
-                     radius={30}
-                     borderWidth={10}
-                     color="#1E9F9F"
-                     textStyle={{ fontSize: 30 }}
-                     onTimeElapsed={() => console.log('Elapsed!')}
-                 />
-                </View> */}
+  renderFaces() {
+    return (
+      <View style={styles.facesContainer} pointerEvents="none">
+        {this.state.faces.map(this.renderFace)}
+      </View>
+    );
+  }
 
-            </View>
-        )
-    }
+  renderLandmarks() {
+    return (
+      <View style={styles.facesContainer} pointerEvents="none">
+        {this.state.faces.map(this.renderLandmarksOfFace)}
+      </View>
+    );
+  }
+
+  renderCamera() {
+    return (
+      <RNCamera
+        ref={ref => {
+          this.camera = ref;
+        }}
+        style={{
+          flex: 1,
+        }}
+        type={this.state.type}
+        autoFocus={this.state.autoFocus}
+        whiteBalance={this.state.whiteBalance}
+        ratio={this.state.ratio}
+        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        onFacesDetected={this.onFacesDetected}
+        onFaceDetectionError={this.onFaceDetectionError}
+        focusDepth={this.state.depth}
+        permissionDialogTitle={'Permission to use camera'}
+        permissionDialogMessage={'We need your permission to use your camera phone'}
+      >
+        <View
+          style={{
+            flex: 0.5,
+            backgroundColor: 'transparent',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+          }}
+        >
+        </View>
+        <View
+          style={{
+            flex: 0.4,
+            backgroundColor: 'transparent',
+            flexDirection: 'row',
+            alignSelf: 'flex-end',
+          }}
+        >
+          <Slider
+            style={{ width: 150, marginTop: 15, alignSelf: 'flex-end' }}
+            onValueChange={this.setFocusDepth.bind(this)}
+            step={0.1}
+            disabled={this.state.autoFocus === 'on'}
+          />
+        </View>
+        <View
+          style={{
+            flex: 0.1,
+            backgroundColor: 'transparent',
+            flexDirection: 'row',
+            alignSelf: 'flex-end',
+          }}
+        >
+          <TouchableOpacity
+            style={[styles.styleButton, { flex: 0.25, alignSelf: 'flex-end' }]}
+            onPress={this.toggleFocus.bind(this)}
+          >
+            <Text style={styles.styleText}> AF : {this.state.autoFocus} </Text>
+          </TouchableOpacity>
+        </View>
+        {this.renderFaces()}
+        {this.renderLandmarks()}
+      </RNCamera>
+    );
+  }
+
+  render() {
+    return <View style={styles.container}>{this.renderCamera()}</View>;
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: 0,
-        marginHorizontal: 0,
-        backgroundColor: 'white',
-    },
-    containerImage: {
-        marginTop: 30,
-        marginBottom: 30,
-        marginHorizontal: 10,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    textTitle: {
-        fontSize: 20,
-        textAlign: 'center',
-    },
-    textTitle2: {
-        fontSize: 20,
-        textAlign: 'center',
-        color: "#F4A32B"
-    },
-    textTitle3: {
-        fontSize: 15,
-        textAlign: 'center',
-    },
-    containerInputs: {
-        marginBottom: 20
-    },
-    preview: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
+  container: {
+    flex: 1,
+    paddingTop: 10,
+    backgroundColor: '#000',
+  },
+  navigation: {
+    flex: 1,
+  },
+  styleButton: {
+    flex: 0.3,
+    height: 40,
+    marginHorizontal: 2,
+    marginBottom: 10,
+    marginTop: 20,
+    borderRadius: 8,
+    borderColor: 'white',
+    borderWidth: 1,
+    padding: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  styleText: {
+    color: 'white',
+    fontSize: 15,
+  },
+  item: {
+    margin: 4,
+    backgroundColor: 'indianred',
+    height: 35,
+    width: 80,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  picButton: {
+    backgroundColor: 'darkseagreen',
+  },
+  facesContainer: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    left: 0,
+    top: 0,
+  },
+  face: {
+    padding: 10,
+    borderWidth: 2,
+    borderRadius: 2,
+    position: 'absolute',
+    borderColor: '#FFD700',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  landmark: {
+    width: landmarkSize,
+    height: landmarkSize,
+    position: 'absolute',
+    backgroundColor: 'red',
+  },
+  faceText: {
+    color: '#FFD700',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    margin: 10,
+    backgroundColor: 'transparent',
+  },
+  row: {
+    flexDirection: 'row',
+  },
 })
