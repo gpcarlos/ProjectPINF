@@ -35,7 +35,8 @@ export default class SkeletonRecognition extends Component {
           configMode: true,
           countdown: false,
           lprop: 1,
-          rprop: 1
+          rprop: 1,
+          realtime: true
         }
         this.webView = null;
     }
@@ -59,7 +60,8 @@ export default class SkeletonRecognition extends Component {
         //this.uploadImage(data.uri,sessionId)
 
         this.setState({
-          countdown: false
+          countdown: false,
+          realtime: false
         })
       }
     };
@@ -355,7 +357,7 @@ export default class SkeletonRecognition extends Component {
     render(){
         return (
             <View style={{flex: 1, flexDirection: 'column',justifyContent: 'center',alignItems: 'center'}}>
-                <View style={{width:"100%", height:"45%",backgroundColor:"gray"}}>
+                <View style={{width:"100%", height:(this.state.realtime) ? '0%' : '90%' ,backgroundColor:"gray"}}>
                     <WebView
                         style={{flex: 1}}
                         source={require('./skeleton.html')}
@@ -363,7 +365,7 @@ export default class SkeletonRecognition extends Component {
                         onMessage={this.onMessage.bind(this)}
                     />
                 </View>
-                <View style={{width:"100%", height:"45%",backgroundColor:"gray"}}>
+                <View style={{width:"100%", height:(this.state.realtime) ? '90%': '0%',backgroundColor:"gray"}}>
                     <RNCamera
                         ref={ref => {
                         this.camera = ref;
@@ -390,6 +392,7 @@ export default class SkeletonRecognition extends Component {
                   </View>
                   :
                   <View style={{width:"100%", height:"10%", backgroundColor:"white",flexDirection:'row'}}>
+                    {this.state.realtime ?
                       <Button
                           title="Configuración"
                           color="gray"
@@ -415,6 +418,8 @@ export default class SkeletonRecognition extends Component {
                               justifyContent: 'center'
                           }}
                         />
+                        :null}
+                    {this.state.realtime ?
                         <Button
                           title="Imitar Pose"
                           color="gray"
@@ -440,6 +445,32 @@ export default class SkeletonRecognition extends Component {
                                 justifyContent: 'center'
                             }}
                         />
+                    :
+                    <Button
+                          title="Volver"
+                          color="gray"
+                          backgroundColor="white"
+                          onPress={() => this.setState({
+                            realtime: true
+                          })}
+                          buttonStyle={{
+                            height: "100%",
+                            backgroundColor:'white',
+                            borderColor : "rgba(78, 101, 112, 1)",
+                              borderWidth : 1
+                          }}
+                          titleStyle={{
+                              color:'#444'
+                          }}
+                          containerStyle={{
+                              width: "50%",
+                              height: "100%",
+                              marginTop:"auto",
+                              marginBottom:"auto",
+                              justifyContent: 'center'
+                          }}
+                        />
+                    }
                   </View>
 
                 }

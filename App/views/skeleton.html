@@ -5,76 +5,15 @@
         <!-- Load TensorFlow.js -->
         <script src="https://unpkg.com/@tensorflow/tfjs"></script>
         <!-- Load Posenet -->
-        <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
+        <script src="./posenet.js"></script>
+        <link rel="stylesheet" href="./estilos.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     </head>
     <body>
-        <!--<img id='image' src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" />-->
         <canvas id='canvas_img'/></canvas>
+        <div class="overlay" id="overlay">
+            <div class="overlay__spinner"></div>
+        </div>
     </body>
-    <script>
-        var imageScaleFactor = 0.5;
-        var outputStride = 16;
-        var flipHorizontal = false;
-
-        //var imageElement = document.getElementById('image');
-
-        function loadImage(imagePath) {
-            image = new Image();
-            /*const promise = new Promise((resolve, reject) => {
-                //image.crossOrigin = '';
-                image.onload = () => {
-                    resolve(image);
-                };
-            });*/
-
-            image.src = imagePath;
-            return image;
-        }
-
-        function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
-            for (let i = 0; i < keypoints.length; i++) {
-                const keypoint = keypoints[i];
-                if (keypoint.score < minConfidence) {
-                    continue;
-                }
-                const { y, x } = keypoint.position;
-                ctx.beginPath();
-                ctx.arc(x * scale, y * scale, 3, 0, 2 * Math.PI);
-                ctx.fillStyle = 'aqua';
-                ctx.fill();
-            }
-        }
-
-        function renderImageToCanvas(image, size, canvas) {
-            canvas.width = size[0];
-            canvas.height = size[1];
-            const ctx = canvas.getContext('2d');
-
-            ctx.drawImage(image, 0, 0, size[0], size[1]);
-        }
-
-        function drawResults(image, canvas, poses,
-            minPartConfidence, minPoseConfidence) {
-            renderImageToCanvas(image, [image.width, image.height], canvas);
-            poses.forEach((pose) => {
-                if (pose.score >= minPoseConfidence) {
-                    drawKeypoints(pose.keypoints,minPartConfidence, canvas.getContext('2d'));
-
-                    /*drawSkeleton(pose.keypoints,minPartConfidence, canvas.getContext('2d'));*/
-                }
-            });
-        }
-
-        document.addEventListener("message", function(event) {
-            //imageElement.src = 'data:image/jpeg;base64, '+event.data;
-            image = loadImage('data:image/jpeg;base64, '+event.data);
-            posenet.load().then(function(net){
-                return net.estimateSinglePose(image, imageScaleFactor, flipHorizontal, outputStride)
-            }, function(err) {window.postMessage(err);}).then(function(pose){
-                const canvas = document.getElementById('canvas_img');
-                drawResults(image, canvas, [pose], 0.5, 0.3);
-                window.postMessage(JSON.stringify(pose));
-            },function(err) {window.postMessage(err);})
-        }, false);
-    </script>
+    <script src='./skeleton.js'></script>
 </html>
