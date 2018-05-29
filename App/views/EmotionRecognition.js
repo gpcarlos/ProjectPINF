@@ -71,7 +71,7 @@ export default class EmotionRecognition extends Component {
   onFacesDetected = ({ faces }) => this.setState({ faces });
   onFaceDetectionError = state => console.warn('Faces detection error:', state);
 
-  renderFace({ bounds, faceID, rollAngle, yawAngle }) {
+  renderFace({ bounds, faceID, rollAngle, yawAngle, smilingProbability }) {
     return (
       <View
         key={faceID}
@@ -89,6 +89,11 @@ export default class EmotionRecognition extends Component {
           },
         ]}
       >
+        {isNaN(smilingProbability)?
+          <Text style={{color:'white', fontSize:24}}>Smiling: 0</Text>
+          :
+          <Text style={{color:'white', fontSize:24}}>Smiling: {Math.round(smilingProbability * 100) / 100}</Text>
+        }
       </View>
     );
   }
@@ -152,6 +157,7 @@ export default class EmotionRecognition extends Component {
         autoFocus={this.state.autoFocus}
         whiteBalance={this.state.whiteBalance}
         ratio={this.state.ratio}
+        faceDetectionClassifications={RNCamera.Constants.FaceDetection.Classifications.all}
         faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
         onFacesDetected={this.onFacesDetected}
         onFaceDetectionError={this.onFaceDetectionError}
