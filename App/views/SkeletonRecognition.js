@@ -360,7 +360,7 @@ export default class SkeletonRecognition extends Component {
                 <View style={{width:"100%", height:(this.state.realtime) ? '0%' : '90%' ,backgroundColor:"gray"}}>
                     <WebView
                         style={{flex: 1}}
-                        source={require('./skeleton.html')}
+                        source={{ uri: 'file:///android_asset/skeleton.html'}}
                         ref={( webView ) => this.webView = webView}
                         onMessage={this.onMessage.bind(this)}
                     />

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skeleton detector</title>
+        <!-- Load TensorFlow.js -->
+        <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+        <!-- Load Posenet -->
+        <script src="./posenet.js"></script>
+        <link rel="stylesheet" href="./estilos.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    </head>
+    <body>
+        <canvas id='canvas_img'/></canvas>
+        <div class="overlay" id="overlay">
+            <div class="overlay__spinner"></div>
+        </div>
+    </body>
+    <script src='./skeleton.js'></script>
+</html>
