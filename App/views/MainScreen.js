@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import {
     Text,
     View,
+    Alert,
+    AsyncStorage,
+    Modal,
     StyleSheet,
     Image,
     TextInput,
@@ -27,6 +30,24 @@ export default class MainScreen extends Component {
         }
     }
 
+    _logout = () => {
+      Alert.alert(
+        'Va a abandonar la sesión',
+        "¿Está seguro?",
+        [
+          {text: 'Salir', onPress: () => {
+            firebase.auth().signOut().then(function(){
+              this.props.navigator.navigate('Loading')
+            }).catch(function(error){
+
+            });
+          }},
+          {text: 'Cancelar', onPress: () => console.log('No Pressed')},
+        ],
+        { cancelable: false }
+      )
+    }
+
     static navigationOptions = ({ navigation }) => {
       const params = navigation.state.params || {};
       return {
@@ -47,8 +68,8 @@ export default class MainScreen extends Component {
     render(){
         return (
             <View style={{flex: 1, flexDirection: 'column',justifyContent: 'center',alignItems: 'stretch'}}>
-                <View style={{position: 'absolute', top: 50,}}>
-                    <Icon name="ios-settings" size={32} color="gray" style={{marginLeft:15, marginRight:-5 }} onPress={()=>this.props.navigation.navigate('Settings')} />
+                <View style={{position: 'absolute', top: 25,}}>
+                    <Icon name="md-exit" size={32} color="gray" style={{marginLeft:15, marginRight:-5, transform: [{rotate : '180deg'}] }}  onPress={this._logout} />
 
                 </View>
                 <View style={styles.containerImage}>
@@ -91,7 +112,10 @@ export default class MainScreen extends Component {
                       onPress={()=>this.props.navigation.navigate('SkeletonRecognition')}
                     />
                 </View>
+                <View style={{position: 'absolute', top: 25, right:25}}>
+                    <Icon name="ios-settings" size={32} color="gray" style={{marginLeft:15, marginRight:-5 }} onPress={()=>this.props.navigation.navigate('Settings')} />
 
+                </View>
 
             </View>
         )

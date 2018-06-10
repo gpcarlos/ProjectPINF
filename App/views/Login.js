@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Consent from './Consent'
 import {
     Text,
     View,
@@ -43,7 +44,7 @@ export default class Login extends Component {
         this.login = this.login.bind(this)
         this.signup = this.signup.bind(this)
     }
-      
+
     static navigationOptions = {
       header:null,
     }
@@ -71,7 +72,9 @@ export default class Login extends Component {
         return (
 
               <ScrollView style={styles.container}>
+                <Consent pagekey={"rgpd"} title={"Uso de datos"} description={` De acuerdo con la RGPD, le informamos que no se hará uso de ningún dato, ni será procesado.
 
+  Las funcionalidades de detección de emociones y de detección del esqueleto requieren el uso de la cámara, pero en ningún momento se almacena ningún tipo de dato. `}/>
                 <View style={styles.containerImage}>
                   <StatusBar
                     backgroundColor= "white"
@@ -144,7 +147,7 @@ export default class Login extends Component {
                           // borderColor : "rgba(78, 101, 112, 0.25)",
                           // borderWidth : 0
                         }}
-                        
+
                       />
                     </View>
                     <View></View>
