@@ -38,7 +38,7 @@ console.ignoredYellowBox = [
 export default class Login extends Component {
     constructor(props){
         super(props)
-        this.state = {          
+        this.state = {
           imagePath: '',
           imageHeight: '',
           imageWidth: '',
@@ -102,21 +102,17 @@ export default class Login extends Component {
   saveData(){
     try {
         const sessionId = new Date().getTime()
-        this.uploadImage(this.state.imagePath,sessionId)
-        .then((responseData) => {
-            const obj = {
+        const obj = {
             name: this.state.nickname,
-            image: responseData,
+            image: "",
             session: sessionId
-            }
-            Helpers.setTest(obj)
-            this.props.navigation.dispatch(NavigationActions.back())
-
-        })
+        }
+        Helpers.setTest(obj)
+        this.props.navigation.dispatch(NavigationActions.back())
     } catch(error){
         console.log(error)
-    }      
-              
+    }
+
   }
   render(){
       return (
@@ -131,20 +127,13 @@ export default class Login extends Component {
                         inputStyle={[styles.inputText]}
                         onChangeText={(nickname) => this.setState({nickname})}
                     />
-                      <Text style={styles.noteText}> Nota: </Text>
 
-                      <Text> Para poder utilizar la función de 'Reconocimiento facial' es necesario que suba una imagen de su cara.</Text>
                       <View style={styles.containerImage}>
-                          {this.state.imagePath ? <Image 
+                          {this.state.imagePath ? <Image
                               style={{width:  "80%", height: 100, flex: 1, marginRight: 10}}
                               source={{uri: this.state.imagePath}}
                           /> : null }
-                      <TouchableHighlight
-                          style={[styles.button, {flex: 1, justifyContent: 'center', alignItems: 'center'}]}
-                          onPress={this.openImagepicker.bind(this)}
-                      >
-                          <Icon name="ios-camera" size={32} color="gray" />
-                      </TouchableHighlight>
+                      
                   </View>
                   </View>
               </View>
